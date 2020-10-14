@@ -1,25 +1,30 @@
 <template>
-    <div>
-        <app-header></app-header>
-        hello this is the homepage
-    </div>
+  <div>
+      <!-- Loader -->
+    <loader v-if="spin"></loader>
+
+    <!-- Slider content -->
+    <slider></slider>
+    <!-- Slider content Ends-->
+  </div>
 </template>
 <script>
-import header from './navbar'
-import footer from './footer'
+import loader from "./loader"
+import slider from './parts/slider'
 export default {
-    components:{
-        'header': 'app-header',
-        'footer': 'app-footer'
-    },
-    data(){
-        return{
-
-        }
-    }
-    
-}
+  components: {
+    loader,
+    slider,
+  },
+  data() {
+    return {
+      spin: false,
+    };
+  },
+  created() {
+    this.spin = true;
+  },
+};
 </script>
 <style lang="scss" scoped>
-
 </style>

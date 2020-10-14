@@ -1,11 +1,15 @@
-<section class=" s-pageheader--home">
+
+{{-- {{$categories}} --}}
+{{-- {{$blogs}} --}}
+
+<section id="top" class=" s-pageheader--home">
 
     <header class="header">
         <div class="header__content row">
 
             <div class="header__logo">
                 <a class="logo" href="index.html">
-                    <img src="images/logo.svg" alt="Homepage">
+                    {{-- <img src="images/logo.svg" alt="Homepage"> --}}
                 </a>
             </div> <!-- end header__logo -->
 
@@ -52,12 +56,11 @@
                     <li class="has-children">
                         <a href="#0" title="">Categories</a>
                         <ul class="sub-menu">
-                        <li><a href="category.html">Lifestyle</a></li>
-                        <li><a href="category.html">Health</a></li>
-                        <li><a href="category.html">Family</a></li>
-                        <li><a href="category.html">Management</a></li>
-                        <li><a href="category.html">Travel</a></li>
-                        <li><a href="category.html">Work</a></li>
+
+                            @foreach ($categories as $category )
+                            <li><a href="#!">{{$category->categoryName}}</a></li>
+                            @endforeach
+                       
                         </ul>
                     </li>
                     <li class="has-children">

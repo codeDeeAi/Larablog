@@ -13,13 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-// New route
-Route::get('/new', 'NewController@index');
-// If route not found, return welcome page
-Route::any('{slug}', function () {
-    return view('welcome');
-});
 
+// Blog route
+Route::get('/', 'BlogController@index');
+
+Route::get('/app/get_slider_blogs', 'BlogController@getSliderBlogs');
+
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// If route not found, return welcome page
+// Route::any('{slug}', function () {
+//     return view('welcome');
+// });

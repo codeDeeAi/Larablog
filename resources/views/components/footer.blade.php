@@ -77,8 +77,8 @@
             <div class="row">
                 <div class="col-full">
                     <div class="s-footer__copyright">
-                        <span>© Copyright Philosophy 2018</span> 
-                        <span>Site Template by <a href="https://colorlib.com/">Colorlib</a></span>
+                        <span>© Copyright laraBlog 2020</span> 
+                        <span>By <a href="#!">Bada Adeola</a></span>
                     </div>
 
                     <div class="go-top">

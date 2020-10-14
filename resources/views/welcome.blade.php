@@ -1,7 +1,9 @@
 @extends('layouts.layout')
-      
+
+@section('title', 'LaraBlog  --Homepage')
 @section('content')
 
-<main-app></main-app>  
-<div>i am the body , yeahhhh</div>
+{{-- @include('components.homeslider') --}}
+<main-app></main-app>
+
 @endsection   
