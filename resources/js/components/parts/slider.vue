@@ -91,7 +91,7 @@ export default {
             )
             if(res.status == 200){
                 this.blogs = res.data;
-                console.log(this.blogs)
+                // console.log(this.blogs)
             }else{
                 this.toast('Network Error .. Pls refresh page', 'error')
             }

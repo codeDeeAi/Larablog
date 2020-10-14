@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Blog;
 use App\Category;
+use App\Tag;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
+    // ====================================INDEX=======================
     public function index(Request $request){
 
         $categories = Category::all();
@@ -17,6 +19,10 @@ class BlogController extends Controller
 
         return view('welcome')->with(['categories' => $categories, 'blogs' => $blogs, ]);
     }
+    // ====================================INDEX ENDS=======================
+
+
+    // ====================================GET SLIDER BLOGS=======================
     public function getSliderBlogs(Request $request){
 
         $blogOne = Blog::orderBy('id','desc')->with(['cat', 'user'])->limit(1)->get([
@@ -32,4 +38,46 @@ class BlogController extends Controller
             'blogOne'=> $blogOne,
         ]);
     }
+    // ====================================GET SLIDER BLOGS ENDS=======================
+
+
+// ====================================GET HOME BLOGS=======================
+    public function getHomeBlogs(Request $request){
+
+        $blogs = Blog::orderBy('id','desc')->with(['cat', 'user'])->get([
+            'id', 'title', 'post_except', 'userId', 'date', 'featuredImage', 
+        ]);
+
+        return response()->json([
+            'blogs'=> $blogs
+        ]);
+    }
+    // ====================================GET HOME BLOGS ENDS=======================
+
+
+    // ====================================GET POPULAR BLOGS ENDS=======================
+
+    public function getPopularBlogs(Request $request){
+        $blogs = Blog::orderBy('id','desc')->with(['cat', 'user'])->limit(6)->get([
+            'id', 'title', 'post_except', 'userId', 'date', 'featuredImage', 
+        ]);
+
+        return response()->json([
+            'blogs'=> $blogs
+        ]);
+    }
+    // ====================================GET POPULAR BLOGS ENDS=======================
+
+
+    // ====================================GET HOME TAGS =======================
+        public function getHomeTags(){
+            $tags = Tag::orderBy('id','desc')->get([
+                'name' 
+            ]);
+    
+            return response()->json([
+                'tags'=> $tags
+            ]);
+        }
+    // ====================================GET HOME TAGS ENDS =======================
 }
