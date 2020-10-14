@@ -32,7 +32,7 @@
             <h2>404</h2>
             <h3>Oops! Page not found</h3>
             <p>The page you're looking for doesn't exist. You may have mistyped the address or the page may have moved </p>
-            <a href="#!">Back to home</a>
+            <a href="/">Back to home</a>
         </div>
       </div>
 

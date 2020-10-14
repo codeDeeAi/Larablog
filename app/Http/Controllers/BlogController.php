@@ -80,4 +80,21 @@ class BlogController extends Controller
             ]);
         }
     // ====================================GET HOME TAGS ENDS =======================
+
+
+     // ==================================== SINGLE BLOG     =======================
+
+        public function singleBlog(Request $request, $id){
+
+            $categories = Category::select('id', 'categoryName')->get();
+
+            $blog = Blog::where('id' , $id)->with(['cat', 'tag','user'])->first([
+                'id', 'title', 'post', 'userId', 'date', 'featuredImage', 
+            ]);
+            return view('singleblog')->with(['categories'=> $categories, 'blog'=>$blog]);
+        }
+    // ====================================SINGLE BlOG ENDS =======================
+
+
+
 }

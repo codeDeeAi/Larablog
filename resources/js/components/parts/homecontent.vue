@@ -9,7 +9,7 @@
                 <article v-for="(blog , i) in blogs.blogs" :key="i" v-if="blogs.blogs.length" class="masonry__brick entry format-standard" data-aos="fade-up">
                         
                     <div class="entry__thumb">
-                        <a href="single-standard.html" class="entry__thumb-link">
+                        <a :href="'/blog/'+ blog.id" class="entry__thumb-link">
                             <img src="images/thumbs/masonry/lamp-400.jpg" 
                                     srcset="images/thumbs/masonry/lamp-400.jpg 1x, images/thumbs/masonry/lamp-800.jpg 2x" alt="">
                         </a>

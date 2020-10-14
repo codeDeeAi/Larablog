@@ -22137,7 +22137,28 @@ var render = function() {
                     attrs: { "data-aos": "fade-up" }
                   },
                   [
-                    _vm._m(0, true),
+                    _c("div", { staticClass: "entry__thumb" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "entry__thumb-link",
+                          attrs: { href: "/blog/" + blog.id }
+                        },
+                        [
+                          _c("img", {
+                            attrs: {
+                              src: "images/thumbs/masonry/lamp-400.jpg",
+                              srcset:
+                                "images/thumbs/masonry/lamp-400.jpg" +
+                                " 1x, " +
+                                "images/thumbs/masonry/lamp-800.jpg" +
+                                " 2x",
+                              alt: ""
+                            }
+                          })
+                        ]
+                      )
+                    ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "entry__text" }, [
                       _c("div", { staticClass: "entry__header" }, [
@@ -22186,37 +22207,10 @@ var render = function() {
       )
     ]),
     _vm._v(" "),
-    _vm._m(1)
+    _vm._m(0)
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "entry__thumb" }, [
-      _c(
-        "a",
-        {
-          staticClass: "entry__thumb-link",
-          attrs: { href: "single-standard.html" }
-        },
-        [
-          _c("img", {
-            attrs: {
-              src: "images/thumbs/masonry/lamp-400.jpg",
-              srcset:
-                "images/thumbs/masonry/lamp-400.jpg" +
-                " 1x, " +
-                "images/thumbs/masonry/lamp-800.jpg" +
-                " 2x",
-              alt: ""
-            }
-          })
-        ]
-      )
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
