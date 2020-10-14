@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 // Blog route
 Route::get('/', 'BlogController@index');
+Route::get('/notfound', function () {
+        return view('notfound');
+    });
+
 
 Route::get('/app/get_slider_blogs', 'BlogController@getSliderBlogs');
 Route::get('/app/get_home_blogs', 'BlogController@getHomeBlogs');

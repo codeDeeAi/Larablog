@@ -14,7 +14,6 @@
     <!-- popular content -->
     <popular></popular>
     <!-- popular content ends -->
-
   </div>
 </template>
 <script>
@@ -27,7 +26,7 @@ export default {
     loader,
     slider,
     homecontent,
-    popular
+    popular,
   },
   data() {
     return {

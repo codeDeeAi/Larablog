@@ -1,0 +1,69 @@
+body {
+    background: linear-gradient(45deg, #8500ff, #5acaff);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#container404 {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    border-radius: 10px;
+    /* width: 100%; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(/images/wheel-500.jpg), #151729;
+    background-size: cover;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .5);
+}
+
+#container404 .content {
+    max-width: 600px;
+    text-align: center;
+}
+
+#container404 .content h2 {
+    font-size: 18vw;
+    color: #fff;
+    line-height: 1em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#container404 .content h3 {
+    position: relative;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #111;
+    background: #fff;
+    font-weight: 300;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+#container404 .content p {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#container404 .content a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 25px;
+    background: #ff0562;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 25px;
+    border-radius: 25px;
+    border-bottom: 1px solid #d00d56;
+}
+
+#container404 .content a:hover {
+    font-size: 1.2em;
+    background: #ff0579;
+}

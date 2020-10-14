@@ -23,7 +23,7 @@
             </div> <!-- end popular -->
             
             <div class="col-four md-six tab-full about">
-                <h3>About Philosophy</h3>
+                <h3>About LaraBlog</h3>
 
                 <p>
                 Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada.

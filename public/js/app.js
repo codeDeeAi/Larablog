@@ -1942,7 +1942,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -21449,6 +21448,557 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/blog.vue?vue&type=template&id=7856a16d&":
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/blog.vue?vue&type=template&id=7856a16d& ***!
+  \*******************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "section",
+      {
+        staticClass: "s-content s-content--narrow s-content--no-padding-bottom"
+      },
+      [
+        _c("article", { staticClass: "row format-standard" }, [
+          _c("div", { staticClass: "s-content__header col-full" }, [
+            _c("h1", { staticClass: "s-content__header-title" }, [
+              _vm._v(
+                "\n                    This Is A Standard Format Post.\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "s-content__header-meta" }, [
+              _c("li", { staticClass: "date" }, [_vm._v("December 16, 2017")]),
+              _vm._v(" "),
+              _c("li", { staticClass: "cat" }, [
+                _vm._v(
+                  "\n                        In\n                        "
+                ),
+                _c("a", { attrs: { href: "#0" } }, [_vm._v("Lifestyle")]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "#0" } }, [_vm._v("Travel")])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "s-content__media col-full" }, [
+            _c("div", { staticClass: "s-content__post-thumb" }, [
+              _c("img", {
+                attrs: {
+                  src: "images/thumbs/single/standard/standard-1000.jpg",
+                  srcset:
+                    "images/thumbs/single/standard/standard-2000.jpg" +
+                    " 2000w, " +
+                    "images/thumbs/single/standard/standard-1000.jpg" +
+                    " 1000w, " +
+                    "images/thumbs/single/standard/standard-500.jpg" +
+                    " 500w",
+                  sizes: "(max-width: 2000px) 100vw, 2000px",
+                  alt: ""
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-full s-content__main" }, [
+            _c("p", { staticClass: "lead" }, [
+              _vm._v(
+                "Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum adipisicing aliqua ea nisi sint."
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum adipisicing aliqua ea nisi sint ut quis proident ullamco ut dolore culpa occaecat ut laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _c("img", {
+                attrs: {
+                  src: "images/wheel-1000.jpg",
+                  srcset:
+                    "images/wheel-2000.jpg" +
+                    " 2000w, " +
+                    "images/wheel-1000.jpg" +
+                    " 1000w, " +
+                    "images/wheel-500.jpg" +
+                    " 500w",
+                  sizes: "(max-width: 2000px) 100vw, 2000px",
+                  alt: ""
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("h2", [_vm._v("Large Heading")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus "
+              ),
+              _c("a", { attrs: { href: "http://#" } }, [
+                _vm._v("omnis voluptas assumenda est")
+              ]),
+              _vm._v(
+                " id quod maxime placeat facere possimus, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et."
+              )
+            ]),
+            _vm._v(" "),
+            _c("blockquote", [
+              _c("p", [
+                _vm._v(
+                  "This is a simple example of a styled blockquote. A blockquote tag typically specifies a section that is quoted from another source of some sort, or highlighting text in your post."
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed."
+              )
+            ]),
+            _vm._v(" "),
+            _c("h3", [_vm._v("Smaller Heading")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.\n\n"
+              ),
+              _c("pre", [
+                _c("code", [
+                  _vm._v(
+                    "\n    code {\n        font-size: 1.4rem;\n        margin: 0 .2rem;\n        padding: .2rem .6rem;\n        white-space: nowrap;\n        background: #F1F1F1;\n        border: 1px solid #E1E1E1;\n        border-radius: 3px;\n    }\n"
+                  )
+                ])
+              ])
+            ]),
+            _c("p", [
+              _vm._v(
+                "Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa."
+              )
+            ]),
+            _vm._v(" "),
+            _c("ul", [
+              _c("li", [
+                _vm._v(
+                  "Donec nulla non metus auctor fringilla.\n                        "
+                ),
+                _c("ul", [
+                  _c("li", [_vm._v("Lorem ipsum dolor sit amet.")]),
+                  _vm._v(" "),
+                  _c("li", [_vm._v("Lorem ipsum dolor sit amet.")]),
+                  _vm._v(" "),
+                  _c("li", [_vm._v("Lorem ipsum dolor sit amet.")])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Donec nulla non metus auctor fringilla.")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Donec nulla non metus auctor fringilla.")])
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed."
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "s-content__tags" }, [
+              _c("span", [_vm._v("Post Tags")]),
+              _vm._v(" "),
+              _c("span", { staticClass: "s-content__tag-list" }, [
+                _c("a", { attrs: { href: "#0" } }, [_vm._v("orci")]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "#0" } }, [_vm._v("lectus")]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "#0" } }, [_vm._v("varius")]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "#0" } }, [_vm._v("turpis")])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "s-content__author" }, [
+              _c("img", {
+                attrs: { src: "images/avatars/user-03.jpg", alt: "" }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "s-content__author-about" }, [
+                _c("h4", { staticClass: "s-content__author-name" }, [
+                  _c("a", { attrs: { href: "#0" } }, [_vm._v("Jonathan Doe")])
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Alias aperiam at debitis deserunt dignissimos dolorem doloribus, fuga fugiat impedit laudantium magni maxime nihil nisi quidem quisquam sed ullam voluptas voluptatum. Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                        "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "s-content__author-social" }, [
+                  _c("li", [
+                    _c("a", { attrs: { href: "#0" } }, [_vm._v("Facebook")])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#0" } }, [_vm._v("Twitter")])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#0" } }, [_vm._v("GooglePlus")])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#0" } }, [_vm._v("Instagram")])
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "s-content__pagenav" }, [
+              _c("div", { staticClass: "s-content__nav" }, [
+                _c("div", { staticClass: "s-content__prev" }, [
+                  _c("a", { attrs: { href: "#0", rel: "prev" } }, [
+                    _c("span", [_vm._v("Previous Post")]),
+                    _vm._v(
+                      "\n                                Tips on Minimalist Design \n                            "
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "s-content__next" }, [
+                  _c("a", { attrs: { href: "#0", rel: "next" } }, [
+                    _c("span", [_vm._v("Next Post")]),
+                    _vm._v(
+                      "\n                                Less Is More \n                            "
+                    )
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "comments-wrap" }, [
+          _c("div", { staticClass: "row", attrs: { id: "comments" } }, [
+            _c("div", { staticClass: "col-full" }, [
+              _c("h3", { staticClass: "h2" }, [_vm._v("5 Comments")]),
+              _vm._v(" "),
+              _c("ol", { staticClass: "commentlist" }, [
+                _c("li", { staticClass: "depth-1 comment" }, [
+                  _c("div", { staticClass: "comment__avatar" }, [
+                    _c("img", {
+                      staticClass: "avatar",
+                      attrs: {
+                        width: "50",
+                        height: "50",
+                        src: "images/avatars/user-01.jpg",
+                        alt: ""
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "comment__content" }, [
+                    _c("div", { staticClass: "comment__info" }, [
+                      _c("cite", [_vm._v("Itachi Uchiha")]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "comment__meta" }, [
+                        _c("time", { staticClass: "comment__time" }, [
+                          _vm._v("Dec 16, 2017 @ 23:05")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          { staticClass: "reply", attrs: { href: "#0" } },
+                          [_vm._v("Reply")]
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "comment__text" }, [
+                      _c("p", [
+                        _vm._v(
+                          "Adhuc quaerendum est ne, vis ut harum tantas noluisse, id suas iisque mei. Nec te inani ponderum vulputate,\n                                facilisi expetenda has et. Iudico dictas scriptorem an vim, ei alia mentitum est, ne has voluptua praesent."
+                        )
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "thread-alt depth-1 comment" }, [
+                  _c("div", { staticClass: "comment__avatar" }, [
+                    _c("img", {
+                      staticClass: "avatar",
+                      attrs: {
+                        width: "50",
+                        height: "50",
+                        src: "images/avatars/user-04.jpg",
+                        alt: ""
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "comment__content" }, [
+                    _c("div", { staticClass: "comment__info" }, [
+                      _c("cite", [_vm._v("John Doe")]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "comment__meta" }, [
+                        _c("time", { staticClass: "comment__time" }, [
+                          _vm._v("Dec 16, 2017 @ 24:05")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          { staticClass: "reply", attrs: { href: "#0" } },
+                          [_vm._v("Reply")]
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "comment__text" }, [
+                      _c("p", [
+                        _vm._v(
+                          "Sumo euismod dissentiunt ne sit, ad eos iudico qualisque adversarium, tota falli et mei. Esse euismod\n                                urbanitas ut sed, et duo scaevola pericula splendide. Primis veritus contentiones nec ad, nec et\n                                tantas semper delicatissimi."
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("ul", { staticClass: "children" }, [
+                    _c("li", { staticClass: "depth-2 comment" }, [
+                      _c("div", { staticClass: "comment__avatar" }, [
+                        _c("img", {
+                          staticClass: "avatar",
+                          attrs: {
+                            width: "50",
+                            height: "50",
+                            src: "images/avatars/user-03.jpg",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "comment__content" }, [
+                        _c("div", { staticClass: "comment__info" }, [
+                          _c("cite", [_vm._v("Kakashi Hatake")]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "comment__meta" }, [
+                            _c("time", { staticClass: "comment__time" }, [
+                              _vm._v("Dec 16, 2017 @ 25:05")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              { staticClass: "reply", attrs: { href: "#0" } },
+                              [_vm._v("Reply")]
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "comment__text" }, [
+                          _c("p", [
+                            _vm._v(
+                              "Duis sed odio sit amet nibh vulputate\n                                            cursus a sit amet mauris. Morbi accumsan ipsum velit. Duis sed odio sit amet nibh vulputate\n                                            cursus a sit amet mauris"
+                            )
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "children" }, [
+                        _c("li", { staticClass: "depth-3 comment" }, [
+                          _c("div", { staticClass: "comment__avatar" }, [
+                            _c("img", {
+                              staticClass: "avatar",
+                              attrs: {
+                                width: "50",
+                                height: "50",
+                                src: "images/avatars/user-04.jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "comment__content" }, [
+                            _c("div", { staticClass: "comment__info" }, [
+                              _c("cite", [_vm._v("John Doe")]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "comment__meta" }, [
+                                _c("time", { staticClass: "comment__time" }, [
+                                  _vm._v("Dec 16, 2017 @ 25:15")
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "reply",
+                                    attrs: { href: "#0" }
+                                  },
+                                  [_vm._v("Reply")]
+                                )
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "comment__text" }, [
+                              _c("p", [
+                                _vm._v(
+                                  "Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est\n                                                etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum."
+                                )
+                              ])
+                            ])
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "depth-1 comment" }, [
+                  _c("div", { staticClass: "comment__avatar" }, [
+                    _c("img", {
+                      staticClass: "avatar",
+                      attrs: {
+                        width: "50",
+                        height: "50",
+                        src: "images/avatars/user-02.jpg",
+                        alt: ""
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "comment__content" }, [
+                    _c("div", { staticClass: "comment__info" }, [
+                      _c("cite", [_vm._v("Shikamaru Nara")]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "comment__meta" }, [
+                        _c("time", { staticClass: "comment-time" }, [
+                          _vm._v("Dec 16, 2017 @ 25:15")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          { staticClass: "reply", attrs: { href: "#" } },
+                          [_vm._v("Reply")]
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "comment__text" }, [
+                      _c("p", [
+                        _vm._v(
+                          "Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem."
+                        )
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "respond" }, [
+                _c("h3", { staticClass: "h2" }, [_vm._v("Add Comment")]),
+                _vm._v(" "),
+                _c(
+                  "form",
+                  {
+                    attrs: {
+                      name: "contactForm",
+                      id: "contactForm",
+                      method: "post",
+                      action: ""
+                    }
+                  },
+                  [
+                    _c("fieldset", [
+                      _c("div", { staticClass: "form-field" }, [
+                        _c("input", {
+                          staticClass: "full-width",
+                          attrs: {
+                            name: "cName",
+                            type: "text",
+                            id: "cName",
+                            placeholder: "Your Name",
+                            value: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-field" }, [
+                        _c("input", {
+                          staticClass: "full-width",
+                          attrs: {
+                            name: "cEmail",
+                            type: "text",
+                            id: "cEmail",
+                            placeholder: "Your Email",
+                            value: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-field" }, [
+                        _c("input", {
+                          staticClass: "full-width",
+                          attrs: {
+                            name: "cWebsite",
+                            type: "text",
+                            id: "cWebsite",
+                            placeholder: "Website",
+                            value: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "message form-field" }, [
+                        _c("textarea", {
+                          staticClass: "full-width",
+                          attrs: {
+                            name: "cMessage",
+                            id: "cMessage",
+                            placeholder: "Your Message"
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "submit btn--primary btn--large full-width",
+                          attrs: { type: "submit" }
+                        },
+                        [_vm._v("Submit")]
+                      )
+                    ])
+                  ]
+                )
+              ])
+            ])
+          ])
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/homepage.vue?vue&type=template&id=7537ea39&scoped=true&":
 /*!***********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/homepage.vue?vue&type=template&id=7537ea39&scoped=true& ***!
@@ -21837,7 +22387,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-four md-six tab-full about" }, [
-      _c("h3", [_vm._v("About Philosophy")]),
+      _c("h3", [_vm._v("About LaraBlog")]),
       _vm._v(" "),
       _c("p", [
         _vm._v(
@@ -38762,6 +39312,59 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /***/ }),
 
+/***/ "./resources/js/components/blog.vue":
+/*!******************************************!*\
+  !*** ./resources/js/components/blog.vue ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _blog_vue_vue_type_template_id_7856a16d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blog.vue?vue&type=template&id=7856a16d& */ "./resources/js/components/blog.vue?vue&type=template&id=7856a16d&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _blog_vue_vue_type_template_id_7856a16d___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _blog_vue_vue_type_template_id_7856a16d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/blog.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/blog.vue?vue&type=template&id=7856a16d&":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/blog.vue?vue&type=template&id=7856a16d& ***!
+  \*************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_blog_vue_vue_type_template_id_7856a16d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./blog.vue?vue&type=template&id=7856a16d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/blog.vue?vue&type=template&id=7856a16d&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_blog_vue_vue_type_template_id_7856a16d___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_blog_vue_vue_type_template_id_7856a16d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/homepage.vue":
 /*!**********************************************!*\
   !*** ./resources/js/components/homepage.vue ***!
@@ -39189,17 +39792,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _components_homepage_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/homepage.vue */ "./resources/js/components/homepage.vue");
+/* harmony import */ var _components_blog_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/blog.vue */ "./resources/js/components/blog.vue");
 
  // Use Router
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]); // Import components
 
 
+
 var routes = [{
   path: "/",
   name: "home",
-  component: _components_homepage_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-  children: []
+  component: _components_homepage_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+}, {
+  path: '/blog',
+  name: "blog",
+  component: _components_blog_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
 }];
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: "history",
