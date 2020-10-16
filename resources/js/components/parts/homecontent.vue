@@ -8,20 +8,20 @@
 
                 <article v-for="(blog , i) in blogs.blogs" :key="i" v-if="blogs.blogs.length" class="masonry__brick entry format-standard" data-aos="fade-up">
                         
-                    <div class="entry__thumb">
+                    <!-- <div class="entry__thumb">
                         <a :href="'/blog/'+ blog.id" class="entry__thumb-link">
                             <img src="images/thumbs/masonry/lamp-400.jpg" 
                                     srcset="images/thumbs/masonry/lamp-400.jpg 1x, images/thumbs/masonry/lamp-800.jpg 2x" alt="">
                         </a>
-                    </div>
+                    </div> -->
     
                     <div class="entry__text">
                         <div class="entry__header">
                             
                             <div class="entry__date">
-                                <a href="single-standard.html">{{blog.date}}</a>
+                                <a :href="'/blog/'+ blog.id + '/'+ blog.slug">{{blog.date}}</a>
                             </div>
-                            <h1 class="entry__title"><a href="#!">{{blog.title}}</a></h1>
+                            <h1 class="entry__title"><a :href="'/blog/'+ blog.id + '/'+ blog.slug">{{blog.title}}</a></h1>
                             
                         </div>
                         <div class="entry__excerpt">

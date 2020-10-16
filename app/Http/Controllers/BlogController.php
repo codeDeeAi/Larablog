@@ -14,7 +14,7 @@ class BlogController extends Controller
 
         $categories = Category::all();
         $blogs = Blog::orderBy('id','desc')->with(['cat', 'user'])->limit(3)->get([
-            'id', 'title', 'post_except', 'userId', 'date', 'featuredImage'
+            'id', 'title', 'post_except', 'userId', 'date', 'featuredImage', 'slug'
         ]);
 
         return view('welcome')->with(['categories' => $categories, 'blogs' => $blogs, ]);
@@ -26,11 +26,11 @@ class BlogController extends Controller
     public function getSliderBlogs(Request $request){
 
         $blogOne = Blog::orderBy('id','desc')->with(['cat', 'user'])->limit(1)->get([
-            'id', 'title', 'post_except', 'userId', 'date', 'featuredImage'
+            'id', 'title', 'post_except', 'userId', 'date', 'featuredImage', 'slug'
         ]);
 
         $blogs = Blog::orderBy('id','desc')->with(['cat', 'user'])->limit(2)->get([
-            'id', 'title', 'post_except', 'userId', 'date', 'featuredImage', 
+            'id', 'title', 'post_except', 'userId', 'date', 'featuredImage',  'slug'
         ]);
 
         return response()->json([
@@ -45,7 +45,7 @@ class BlogController extends Controller
     public function getHomeBlogs(Request $request){
 
         $blogs = Blog::orderBy('id','desc')->with(['cat', 'user'])->get([
-            'id', 'title', 'post_except', 'userId', 'date', 'featuredImage', 
+            'id', 'title', 'post_except', 'userId', 'date', 'featuredImage', 'slug'
         ]);
 
         return response()->json([
@@ -59,7 +59,7 @@ class BlogController extends Controller
 
     public function getPopularBlogs(Request $request){
         $blogs = Blog::orderBy('id','desc')->with(['cat', 'user'])->limit(6)->get([
-            'id', 'title', 'post_except', 'userId', 'date', 'featuredImage', 
+            'id', 'title', 'post_except', 'userId', 'date', 'featuredImage', 'slug'
         ]);
 
         return response()->json([
@@ -84,12 +84,12 @@ class BlogController extends Controller
 
      // ==================================== SINGLE BLOG     =======================
 
-        public function singleBlog(Request $request, $id){
+        public function singleBlog(Request $request, $id, $slug){
 
             $categories = Category::select('id', 'categoryName')->get();
 
             $blog = Blog::where('id' , $id)->with(['cat', 'tag','user'])->first([
-                'id', 'title', 'post', 'userId', 'date', 'featuredImage', 
+                'id', 'title', 'post', 'userId', 'date', 'featuredImage', 'slug'
             ]);
             return view('singleblog')->with(['categories'=> $categories, 'blog'=>$blog]);
         }

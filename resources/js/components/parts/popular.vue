@@ -8,10 +8,10 @@
 
                 <div class="block-1-2 block-m-full popular__posts">
                     <article v-for="(blog, i) in blogs.blogs" :key="i" class="col-block popular__post">
-                        <a href="#0" class="popular__thumb">
+                        <a :href="'/blog/'+ blog.id + '/'+ blog.slug" class="popular__thumb">
                             <img src="images/thumbs/small/wheel-150.jpg" alt="">
                         </a>
-                        <h5><a href="#0">{{blog.title}}</a></h5>
+                        <h5><a :href="'/blog/'+ blog.id + '/'+ blog.slug">{{blog.title}}</a></h5>
                         <section class="popular__meta">
                                 <span class="popular__author"><span>By</span> <a href="#0">{{blog.user.lastName}} {{blog.user.firstName}}</a></span>
                             <span class="popular__date"><span>on</span> <time datetime="2017-12-19">{{blog.date}}</time></span>

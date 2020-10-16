@@ -25,7 +25,7 @@ Route::get('/app/get_slider_blogs', 'BlogController@getSliderBlogs');
 Route::get('/app/get_home_blogs', 'BlogController@getHomeBlogs');
 Route::get('/app/get_tags', 'BlogController@getHomeTags');
 Route::get('/app/get_popular_blogs', 'BlogController@getPopularBlogs');
-Route::get('/blog/{id}', 'BlogController@singleBlog');
+Route::get('/blog/{id}/{slug}', 'BlogController@singleBlog');
 
 
 

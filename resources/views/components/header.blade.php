@@ -52,7 +52,7 @@
                 <h2 class="header__nav-heading h6">LaraBlog</h2>
 
                 <ul class="header__nav">
-                    <li class="current"><a href="index.html" title="">Home</a></li>
+                    <li class="current"><a href="/" title="">Home</a></li>
                     <li class="has-children">
                         <a href="#0" title="">Categories</a>
                         <ul class="sub-menu">

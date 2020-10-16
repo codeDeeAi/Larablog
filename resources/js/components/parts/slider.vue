@@ -14,7 +14,7 @@
                                     </span>
                                 </span>
 
-                                <h1><a href="#0" title="">{{b.title}}</a></h1>
+                                <h1><a :href="'/blog/'+ b.id + '/'+ b.slug" title="">{{b.title}}</a></h1>
 
                                 <div class="entry__info">
                                     <a href="#0" class="entry__profile-pic">
@@ -46,7 +46,7 @@
                                     </span>
                                 </span>
 
-                                <h1><a href="#0" title="">{{blog.title}}</a></h1>
+                                <h1><a :href="'/blog/'+ blog.id + '/'+ blog.slug" title="">{{blog.title}}</a></h1>
 
                                 <div class="entry__info">
                                     <a href="#0" class="entry__profile-pic">

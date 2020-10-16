@@ -22137,41 +22137,30 @@ var render = function() {
                     attrs: { "data-aos": "fade-up" }
                   },
                   [
-                    _c("div", { staticClass: "entry__thumb" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "entry__thumb-link",
-                          attrs: { href: "/blog/" + blog.id }
-                        },
-                        [
-                          _c("img", {
-                            attrs: {
-                              src: "images/thumbs/masonry/lamp-400.jpg",
-                              srcset:
-                                "images/thumbs/masonry/lamp-400.jpg" +
-                                " 1x, " +
-                                "images/thumbs/masonry/lamp-800.jpg" +
-                                " 2x",
-                              alt: ""
-                            }
-                          })
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
                     _c("div", { staticClass: "entry__text" }, [
                       _c("div", { staticClass: "entry__header" }, [
                         _c("div", { staticClass: "entry__date" }, [
-                          _c("a", { attrs: { href: "single-standard.html" } }, [
-                            _vm._v(_vm._s(blog.date))
-                          ])
+                          _c(
+                            "a",
+                            {
+                              attrs: {
+                                href: "/blog/" + blog.id + "/" + blog.slug
+                              }
+                            },
+                            [_vm._v(_vm._s(blog.date))]
+                          )
                         ]),
                         _vm._v(" "),
                         _c("h1", { staticClass: "entry__title" }, [
-                          _c("a", { attrs: { href: "#!" } }, [
-                            _vm._v(_vm._s(blog.title))
-                          ])
+                          _c(
+                            "a",
+                            {
+                              attrs: {
+                                href: "/blog/" + blog.id + "/" + blog.slug
+                              }
+                            },
+                            [_vm._v(_vm._s(blog.title))]
+                          )
                         ])
                       ]),
                       _vm._v(" "),
@@ -22308,12 +22297,28 @@ var render = function() {
               "article",
               { key: i, staticClass: "col-block popular__post" },
               [
-                _vm._m(0, true),
+                _c(
+                  "a",
+                  {
+                    staticClass: "popular__thumb",
+                    attrs: { href: "/blog/" + blog.id + "/" + blog.slug }
+                  },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src: "images/thumbs/small/wheel-150.jpg",
+                        alt: ""
+                      }
+                    })
+                  ]
+                ),
                 _vm._v(" "),
                 _c("h5", [
-                  _c("a", { attrs: { href: "#0" } }, [
-                    _vm._v(_vm._s(blog.title))
-                  ])
+                  _c(
+                    "a",
+                    { attrs: { href: "/blog/" + blog.id + "/" + blog.slug } },
+                    [_vm._v(_vm._s(blog.title))]
+                  )
                 ]),
                 _vm._v(" "),
                 _c("section", { staticClass: "popular__meta" }, [
@@ -22344,7 +22349,7 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _vm._m(1)
+      _vm._m(0)
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "row bottom tags-wrap" }, [
@@ -22366,16 +22371,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("a", { staticClass: "popular__thumb", attrs: { href: "#0" } }, [
-      _c("img", {
-        attrs: { src: "images/thumbs/small/wheel-150.jpg", alt: "" }
-      })
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -22484,9 +22479,16 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("h1", [
-                        _c("a", { attrs: { href: "#0", title: "" } }, [
-                          _vm._v(_vm._s(b.title))
-                        ])
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              href: "/blog/" + b.id + "/" + b.slug,
+                              title: ""
+                            }
+                          },
+                          [_vm._v(_vm._s(b.title))]
+                        )
                       ]),
                       _vm._v(" "),
                       _c("div", { staticClass: "entry__info" }, [
@@ -22547,9 +22549,16 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("h1", [
-                        _c("a", { attrs: { href: "#0", title: "" } }, [
-                          _vm._v(_vm._s(blog.title))
-                        ])
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              href: "/blog/" + blog.id + "/" + blog.slug,
+                              title: ""
+                            }
+                          },
+                          [_vm._v(_vm._s(blog.title))]
+                        )
                       ]),
                       _vm._v(" "),
                       _c("div", { staticClass: "entry__info" }, [
