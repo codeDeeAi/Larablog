@@ -2,7 +2,6 @@
 
 @section('title', 'LaraBlog  --blog')
 @section('content')
-
 <section class="s-content s-content--narrow s-content--no-padding-bottom">
 
     <article class="row format-standard">
@@ -16,7 +15,7 @@
                 <li class="cat">
                     In
                     @foreach ($blog->cat as $c)
-                        <a href="#!">{{$c->categoryName}}</a>                        
+                        <a href="/category/{{$c->categoryName}}/{{$c->id}}">{{$c->categoryName}}</a>                        
                     @endforeach
                 </li>
             </ul>
@@ -41,7 +40,7 @@
 
                 <span class="s-content__tag-list">
                     @foreach ($blog->tag as $t)
-                        <a href="#!">{{$t->name}}</a>                        
+                        <a href="/tag/{{$t->name}}/{{$t->id}}">{{$t->name}}</a>                        
                     @endforeach
                 </span>
             </p> <!-- end s-content__tags -->
@@ -69,16 +68,25 @@
             <div class="s-content__pagenav">
                 <div class="s-content__nav">
                     <div class="s-content__prev">
-                        <a href="#0" rel="prev">
-                            <span>Previous Post</span>
-                            Tips on Minimalist Design 
-                        </a>
+                        @foreach ($related as $rel)
+                            @if ($loop->first)
+                                <a href="/blog/{{$rel->id}}/{{$rel->slug}}" rel="prev">
+                                    <span>Previous Post</span>
+                                    {{$rel->title}}
+                                </a> 
+                            @endif                                                       
+                        @endforeach
+                        
                     </div>
                     <div class="s-content__next">
-                        <a href="#0" rel="next">
-                            <span>Next Post</span>
-                            Less Is More 
-                        </a>
+                        @foreach ($related as $rel)
+                            @if ($loop->last)
+                    <a href="/blog/{{$rel->id}}/{{$rel->slug}}" rel="next">
+                                <span>Next Post</span>
+                                {{$rel->title}}
+                            </a>
+                            @endif                                                       
+                        @endforeach
                     </div>
                 </div>
             </div> <!-- end s-content__pagenav -->

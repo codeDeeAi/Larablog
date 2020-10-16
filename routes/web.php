@@ -26,13 +26,14 @@ Route::get('/app/get_home_blogs', 'BlogController@getHomeBlogs');
 Route::get('/app/get_tags', 'BlogController@getHomeTags');
 Route::get('/app/get_popular_blogs', 'BlogController@getPopularBlogs');
 Route::get('/blog/{id}/{slug}', 'BlogController@singleBlog');
+Route::get('/category/{categoryName}/{id}', 'BlogController@categoryIndex');
+Route::get('/tag/{name}/{id}', 'BlogController@tagIndex');
+Route::get('/allblogs', 'BlogController@allBlogs');
+Route::get('/about-us', 'BlogController@aboutUsPage');
+Route::get('/contact-us', 'BlogController@contactUsPage');
 
 
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 // If route not found, return welcome page
-// Route::any('{slug}', function () {
-//     return view('welcome');
-// });
+Route::any('{slug}', function () {
+    return view('notfound');
+});

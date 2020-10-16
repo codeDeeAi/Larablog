@@ -13,11 +13,12 @@ class BlogController extends Controller
     public function index(Request $request){
 
         $categories = Category::all();
+        $tags = Tag::select('id', 'name')->get();
         $blogs = Blog::orderBy('id','desc')->with(['cat', 'user'])->limit(3)->get([
             'id', 'title', 'post_except', 'userId', 'date', 'featuredImage', 'slug'
         ]);
 
-        return view('welcome')->with(['categories' => $categories, 'blogs' => $blogs, ]);
+        return view('welcome')->with(['categories' => $categories, 'blogs' => $blogs, 'tags' => $tags,]);
     }
     // ====================================INDEX ENDS=======================
 
@@ -72,7 +73,7 @@ class BlogController extends Controller
     // ====================================GET HOME TAGS =======================
         public function getHomeTags(){
             $tags = Tag::orderBy('id','desc')->get([
-                'name' 
+                'id','name' 
             ]);
     
             return response()->json([
@@ -91,10 +92,75 @@ class BlogController extends Controller
             $blog = Blog::where('id' , $id)->with(['cat', 'tag','user'])->first([
                 'id', 'title', 'post', 'userId', 'date', 'featuredImage', 'slug'
             ]);
-            return view('singleblog')->with(['categories'=> $categories, 'blog'=>$blog]);
+            $tags = Tag::select('id', 'name')->get();
+
+            $category_ids = [];
+            foreach($blog->cat as $cat){
+                array_push($category_ids, $cat->id);
+            }
+
+            $related = Blog::whereHas('cat', function($q) use($category_ids){
+                $q->whereIn('category_id', $category_ids);
+            })->limit(2)->orderBy('id', 'desc')->get(['id', 'title', 'slug']);
+            return view('singleblog')->with(['categories'=> $categories, 'blog'=>$blog, 'related'=>$related, 'tags'=>$tags]);
         }
     // ====================================SINGLE BlOG ENDS =======================
 
+     // ====================================BlOG  CATEGORIES PAGE =======================
+    public function categoryIndex(Request $request , $categoryName, $id){
+        $categories = Category::select('id', 'categoryName')->get();
+        $tags = Tag::select('id', 'name')->get();
+
+        $blogs = Blog::with('user')->whereHas('cat', function($q) use($id){
+            $q->where('category_id', $id);
+        })->orderBy('id', 'desc')->select(['id', 'title', 'post_except', 'userId', 'date', 'featuredImage', 'slug' ])->paginate(16);
+
+        return view('category')->with(['blogs'=> $blogs, 'categories'=> $categories, 'tags'=>$tags]);
+    }
+     // =================================== BlOG CATEGORIES PAGE ENDS =======================
 
 
+     // ====================================BlOG  TAGS PAGE =======================
+    public function tagIndex(Request $request , $name, $id){
+        $categories = Category::select('id', 'categoryName')->get();
+        $tags = Tag::select('id', 'name')->get();
+
+        $blogs = Blog::with('user')->whereHas('tag', function($q) use($id){
+            $q->where('tag_id', $id);
+        })->orderBy('id', 'desc')->select(['id', 'title', 'post_except', 'userId', 'date', 'featuredImage', 'slug' ])->paginate(16);
+
+        return view('tag')->with(['blogs'=> $blogs, 'categories'=> $categories, 'tags'=>$tags]);
+    }
+     // =================================== BlOG TAGS PAGE ENDS =======================
+
+     // =================================== ALL BlOGS PAGE =======================
+     public function allBlogs(Request $request){
+        $categories = Category::all();
+        $tags = Tag::select('id', 'name')->get();
+        $blogs = Blog::orderBy('id','desc')->with(['cat', 'user'])->select([
+            'id', 'title', 'post_except', 'userId', 'date', 'featuredImage', 'slug'
+        ])->paginate(16);
+
+        return view('allblogs')->with(['categories' => $categories, 'blogs' => $blogs, 'tags' => $tags,]);
+     }
+      // =================================== ALL BlOGS PAGE ENDS =======================
+      
+
+      // =================================== ABOUT US PAGE =======================
+     public function aboutUsPage(Request $request){
+        $categories = Category::all();
+        $tags = Tag::select('id', 'name')->get();
+
+        return view('about')->with(['categories' => $categories,  'tags' => $tags,]);
+     }
+      // =================================== ABOUT US PAGE ENDS =======================
+
+       // =================================== CONTACT US  PAGE =======================
+     public function contactUsPage(Request $request){
+        $categories = Category::all();
+        $tags = Tag::select('id', 'name')->get();
+
+        return view('contact')->with(['categories' => $categories,  'tags' => $tags,]);
+     }
+      // =================================== CONTACT US  PAGE ENDS =======================
 }

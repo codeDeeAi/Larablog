@@ -52,7 +52,7 @@
                 <h3>Tags</h3>
 
                 <div class="tagcloud">
-                    <a  v-for="(tag, ti) in tags.tags" :key="ti" href="#0">{{tag.name}}</a>                    
+                    <a  v-for="(tag, ti) in tags.tags" :key="ti" :href="'/tag/' + tag.name + '/' + tag.id">{{tag.name}}</a>                    
                 </div> <!-- end tagcloud -->
             </div> <!-- end tags -->
         </div> <!-- end tags-wrap -->

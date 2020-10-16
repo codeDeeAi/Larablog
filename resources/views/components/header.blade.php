@@ -1,6 +1,4 @@
 
-{{-- {{$categories}} --}}
-{{-- {{$blogs}} --}}
 
 <section id="top" class=" s-pageheader--home">
 
@@ -53,19 +51,29 @@
 
                 <ul class="header__nav">
                     <li class="current"><a href="/" title="">Home</a></li>
+                    <li><a href="/allblogs" title="">Blogs</a></li>
                     <li class="has-children">
                         <a href="#0" title="">Categories</a>
                         <ul class="sub-menu">
 
                             @foreach ($categories as $category )
-                            <li><a href="#!">{{$category->categoryName}}</a></li>
+                            <li><a href="/category/{{$category->categoryName}}/{{$category->id}}">{{$category->categoryName}}</a></li>
                             @endforeach
                        
                         </ul>
                     </li>
-                    <li><a href="style-guide.html" title="">Styles</a></li>
-                    <li><a href="about.html" title="">About</a></li>
-                    <li><a href="contact.html" title="">Contact</a></li>
+                    <li class="has-children">
+                        <a href="#0" title="">Tags</a>
+                        <ul class="sub-menu">
+
+                            @foreach ($tags as $tag )
+                            <li><a href="/tag/{{$tag->name}}/{{$tag->id}}">{{$tag->name}}</a></li>
+                            @endforeach
+                       
+                        </ul>
+                    </li>
+                    <li><a href="/about-us" title="">About</a></li>
+                    <li><a href="/contact-us" title="">Contact</a></li>
                 </ul> <!-- end header__nav -->
 
                 <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>

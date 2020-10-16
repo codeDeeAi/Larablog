@@ -2094,16 +2094,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -22207,56 +22197,8 @@ var staticRenderFns = [
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-full" }, [
         _c("nav", { staticClass: "pgn" }, [
-          _c("ul", [
-            _c("li", [
-              _c("a", { staticClass: "pgn__prev", attrs: { href: "#0" } }, [
-                _vm._v("Prev")
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "pgn__num", attrs: { href: "#0" } }, [
-                _vm._v("1")
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("span", { staticClass: "pgn__num current" }, [_vm._v("2")])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "pgn__num", attrs: { href: "#0" } }, [
-                _vm._v("3")
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "pgn__num", attrs: { href: "#0" } }, [
-                _vm._v("4")
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "pgn__num", attrs: { href: "#0" } }, [
-                _vm._v("5")
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("span", { staticClass: "pgn__num dots" }, [_vm._v("…")])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "pgn__num", attrs: { href: "#0" } }, [
-                _vm._v("8")
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "pgn__next", attrs: { href: "#0" } }, [
-                _vm._v("Next")
-              ])
-            ])
+          _c("a", { staticClass: "btn", attrs: { href: "/allblogs" } }, [
+            _vm._v("View All Blogs")
           ])
         ])
       ])
@@ -22360,9 +22302,11 @@ var render = function() {
           "div",
           { staticClass: "tagcloud" },
           _vm._l(_vm.tags.tags, function(tag, ti) {
-            return _c("a", { key: ti, attrs: { href: "#0" } }, [
-              _vm._v(_vm._s(tag.name))
-            ])
+            return _c(
+              "a",
+              { key: ti, attrs: { href: "/tag/" + tag.name + "/" + tag.id } },
+              [_vm._v(_vm._s(tag.name))]
+            )
           }),
           0
         )

@@ -10,11 +10,12 @@
                     <h4>Quick Links</h4>
 
                     <ul class="s-footer__linklist">
-                        <li><a href="#0">Home</a></li>
-                        <li><a href="#0">Blog</a></li>
-                        <li><a href="#0">Styles</a></li>
-                        <li><a href="#0">About</a></li>
-                        <li><a href="#0">Contact</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/allblogs">Blogs</a></li>
+                        <li><a href="#0">Tags</a></li>
+                        <li><a href="#0">Categories</a></li>
+                        <li><a href="/contact-us">Contact</a></li>
+                        <li><a href="/about-us">About Us</a></li>
                         <li><a href="#0">Privacy Policy</a></li>
                     </ul>
 
