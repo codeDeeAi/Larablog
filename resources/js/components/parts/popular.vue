@@ -26,7 +26,9 @@
                 <h3>About LaraBlog</h3>
 
                 <p>
-                Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada.
+                    LaraBlog is a blog webapp developed by Bada Adeola with Laravel and  Vue JS, it is a modern blog which implements smooth customizable user interface
+                    , fast load time, improved user experience, security, user roles and permissions which are set by the blog owner. These rules makes the webapp easily customizable
+                    by the blog owner making it a state of the art blog app. 
                 </p>
 
                 <ul class="about__social">

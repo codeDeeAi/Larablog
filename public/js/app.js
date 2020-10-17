@@ -2216,6 +2216,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -22324,7 +22326,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", [
         _vm._v(
-          "\n            Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada.\n            "
+          "\n                LaraBlog is a blog webapp developed by Bada Adeola with Laravel and  Vue JS, it is a modern blog which implements smooth customizable user interface\n                , fast load time, improved user experience, security, user roles and permissions which are set by the blog owner. These rules makes the webapp easily customizable\n                by the blog owner making it a state of the art blog app. \n            "
         )
       ]),
       _vm._v(" "),
