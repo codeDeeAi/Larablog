@@ -9,7 +9,7 @@
         </div>
     <div class="row masonry-wrap">
         <div class="masonry">
-
+            {{$error}}
             <div class="grid-sizer"></div>
 
             @foreach ($blogs as $blog)

@@ -187,15 +187,15 @@ class BlogController extends Controller
             });           
         }
        if($blogs->count() < 1){
+        $err = 'No match found';
+        $get =  $blogs->paginate(16);
+        return view('search')->with(['categories' => $categories, 'blogs' => $get, 'tags' => $tags, 'error'=> $err]);
             
-            return response()->json([
-                'message' => 'No match found'
-            ]);
             }
         else{
-
+            $err = '';
             $get =  $blogs->paginate(16);
-            return view('search')->with(['categories' => $categories, 'blogs' => $get, 'tags' => $tags]);
+            return view('search')->with(['categories' => $categories, 'blogs' => $get, 'tags' => $tags, 'error'=> $err]);
         }
         
       }
