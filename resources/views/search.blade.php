@@ -1,10 +1,12 @@
 @extends('layouts.layout')
 
-@section('title', 'LaraBlog  --Categories')
+@section('title', 'LaraBlog  --Search')
 @section('content')
 
 <section class="s-content">
-        
+        <div class="row">
+            <h3>Search results :</h3>
+        </div>
     <div class="row masonry-wrap">
         <div class="masonry">
 
@@ -56,5 +58,6 @@
     </div>
 
 </section> <!-- s-content -->
+
 
 @endsection  

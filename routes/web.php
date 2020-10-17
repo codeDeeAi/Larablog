@@ -31,6 +31,7 @@ Route::get('/tag/{name}/{id}', 'BlogController@tagIndex');
 Route::get('/allblogs', 'BlogController@allBlogs');
 Route::get('/about-us', 'BlogController@aboutUsPage');
 Route::get('/contact-us', 'BlogController@contactUsPage');
+Route::any('/search', 'BlogController@search');
 
 
 // If route not found, return welcome page

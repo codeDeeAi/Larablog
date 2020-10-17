@@ -163,4 +163,40 @@ class BlogController extends Controller
         return view('contact')->with(['categories' => $categories,  'tags' => $tags,]);
      }
       // =================================== CONTACT US  PAGE ENDS =======================
+
+
+      public function search(Request $request){
+        $str = $request->str;
+
+        $categories = Category::all();
+        $tags = Tag::select('id', 'name')->get();
+        $blogs = Blog::orderBy('id','desc')->with(['cat', 'user', 'tag'])->select([
+            'id', 'title', 'post_except', 'userId', 'date', 'featuredImage', 'slug'
+        ]);
+
+        if(!$str){
+            return $blogs->get();
+        }
+        if ($str) {
+            $blogs->where('title', 'LIKE', '%'.$str.'%')
+            ->orWhereHas('cat', function($q) use($str){
+                $q->where('categoryName', $str);
+            })
+            ->orWhereHas('tag', function($q) use($str){
+                $q->where('name', $str);
+            });           
+        }
+       if($blogs->count() < 1){
+            
+            return response()->json([
+                'message' => 'No match found'
+            ]);
+            }
+        else{
+
+            $get =  $blogs->paginate(16);
+            return view('search')->with(['categories' => $categories, 'blogs' => $get, 'tags' => $tags]);
+        }
+        
+      }
 }
