@@ -1,4 +1,5 @@
- <!-- s-footer
+<template>
+      <!-- s-footer
     ================================================== -->
     <footer class="s-footer">
 
@@ -90,3 +91,20 @@
         </div> <!-- end s-footer__bottom -->
 
     </footer> <!-- end s-footer -->
+</template>
+<script>
+export default {
+    data(){
+        return{
+           
+        }
+    },
+    methods:{
+        
+        
+    },
+    created(){
+       
+    }
+}
+</script>

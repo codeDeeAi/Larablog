@@ -10,6 +10,7 @@
 
          <!-- CSS
     ================================================== -->
+    {{-- <link rel="stylesheet" href="/bs/css/bootstrap.min.css"> --}}
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/vendor.css">
     <link rel="stylesheet" href="/css/main.css">
@@ -33,7 +34,7 @@
     <body>
       
         {{-- App Header --}}
-        @include('components.header')
+        {{-- @include('components.header') --}}
 
         {{-- App Body --}}
         <div id="app"> 
@@ -41,7 +42,7 @@
         </div>
 
         {{-- App Footer --}}
-        @include('components.footer')
+        {{-- @include('components.footer') --}}
 
 
  <script type="text/javascript" src="{{ mix('js/app.js') }}" ></script>
@@ -55,5 +56,6 @@
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="/js/plugins.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/bs/js/bootstrap.min.js"></script>
     </body>
 </html>

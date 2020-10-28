@@ -23,7 +23,9 @@ Route::get('/notfound', function () {
 
 Route::get('/app/get_slider_blogs', 'BlogController@getSliderBlogs');
 Route::get('/app/get_home_blogs', 'BlogController@getHomeBlogs');
-Route::get('/app/get_tags', 'BlogController@getHomeTags');
+Route::get('/app/get_tags', 'BlogController@getTags');
+Route::get('/app/get_cats', 'BlogController@getCats');
+Route::get('/app/get_blogs', 'BlogController@getBlogs');
 Route::get('/app/get_popular_blogs', 'BlogController@getPopularBlogs');
 Route::get('/blog/{id}/{slug}', 'BlogController@singleBlog');
 Route::get('/category/{categoryName}/{id}', 'BlogController@categoryIndex');
@@ -32,8 +34,19 @@ Route::get('/allblogs', 'BlogController@allBlogs');
 Route::get('/about-us', 'BlogController@aboutUsPage');
 Route::get('/contact-us', 'BlogController@contactUsPage');
 Route::any('/search', 'BlogController@search');
+Route::any('/login', 'BlogController@login');
+Route::any('/user-login', 'BloguserController@userLogin');
+Route::any('/signup', 'BlogController@signup');
+// Create new blog user
+Route::post('/user-signup', 'BloguserController@create');
 
+// Route::prefix('app')->middleware([AdminCheck::class])->group(function(){
+Route::prefix('app')->group(function(){
 
+});
+Route::get('{any}', function () {
+    return view('welcome');
+})->where( 'any','.*');
 // If route not found, return welcome page
 Route::any('{slug}', function () {
     return view('notfound');

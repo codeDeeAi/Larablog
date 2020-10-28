@@ -55,6 +55,17 @@ class BlogController extends Controller
     }
     // ====================================GET HOME BLOGS ENDS=======================
 
+    // ====================================GET HOME BLOGS=======================
+    public function getBlogs(Request $request){
+
+        return Blog::orderBy('id','desc')->with(['cat', 'user', 'tag'])->get([
+            'id', 'title', 'post_except', 'userId', 'date', 'featuredImage', 'slug'
+        ]);
+
+        
+    }
+    // ====================================GET HOME BLOGS ENDS=======================
+
 
     // ====================================GET POPULAR BLOGS ENDS=======================
 
@@ -68,20 +79,35 @@ class BlogController extends Controller
         ]);
     }
     // ====================================GET POPULAR BLOGS ENDS=======================
+     // Get Categories
+   public function getCats(Request $request)
+   {
+       return Category::get([
+           'id', 'categoryName'
+       ]);
+   }
 
+   // Get tags
+   public function getTags(Request $request)
+   {
+       return Tag::get([
+           'id', 'name'
+       ]);
+   }
 
-    // ====================================GET HOME TAGS =======================
+    // ====================================GET TAGS =======================
         public function getHomeTags(){
-            $tags = Tag::orderBy('id','desc')->get([
+            return Tag::orderBy('id','desc')->get([
                 'id','name' 
             ]);
     
-            return response()->json([
-                'tags'=> $tags
-            ]);
+            // return response()->json([
+            //     'tags'=> $tags
+            // ]);
         }
-    // ====================================GET HOME TAGS ENDS =======================
+    // ====================================GET TAGS ENDS =======================
 
+   
 
      // ==================================== SINGLE BLOG     =======================
 
@@ -164,6 +190,7 @@ class BlogController extends Controller
      }
       // =================================== CONTACT US  PAGE ENDS =======================
 
+ // =================================== SEARCH =======================
 
       public function search(Request $request){
         $str = $request->str;
@@ -199,4 +226,24 @@ class BlogController extends Controller
         }
         
       }
+ // =================================== SEARCH ENDS =======================
+
+ // ===================================  LOGIN PAGE  =======================
+      public function login(Request $request){
+
+        $categories = Category::all();
+        $tags = Tag::select('id', 'name')->get();
+
+        return view('login')->with(['categories' => $categories, 'tags' => $tags,]);
+      }
+ // =================================== L OGIN  PAGE ENDS =======================    
+ // ===================================  LOGIN PAGE  =======================
+ public function signup(Request $request){
+
+    $categories = Category::all();
+    $tags = Tag::select('id', 'name')->get();
+
+    return view('signup')->with(['categories' => $categories, 'tags' => $tags,]);
+  }
+// =================================== L OGIN  PAGE ENDS =======================   
 }

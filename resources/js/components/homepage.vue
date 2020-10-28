@@ -14,6 +14,11 @@
     <!-- popular content -->
     <popular></popular>
     <!-- popular content ends -->
+
+    <!-- Footer -->
+    <appfooter></appfooter>
+    <!-- Footer Ends -->
+
   </div>
 </template>
 <script>
@@ -21,12 +26,15 @@ import loader from "./loader"
 import slider from './parts/slider'
 import homecontent from './parts/homecontent'
 import popular from './parts/popular'
+import appfooter from './parts/footer'
+
 export default {
   components: {
     loader,
     slider,
     homecontent,
     popular,
+    appfooter,
   },
   data() {
     return {

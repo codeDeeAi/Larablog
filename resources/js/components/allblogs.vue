@@ -1,12 +1,13 @@
 <template>
-     <section class="s-content">
+    <div>
+         <section class="s-content">
         
         <div class="row masonry-wrap">
             <div class="masonry">
 
                 <div class="grid-sizer"></div>
 
-                <article v-for="(blog , i) in blogs.blogs" :key="i" v-if="blogs.blogs.length" class="masonry__brick entry format-standard" data-aos="fade-up">
+                <article v-for="(blog , i) in blogs" :key="i" v-if="blogs.length" class="masonry__brick entry format-standard" data-aos="fade-up">
                         
                     <!-- <div class="entry__thumb">
                         <a :href="'/blog/'+ blog.id" class="entry__thumb-link">
@@ -42,19 +43,20 @@
             </div> <!-- end masonry -->
         </div> <!-- end masonry-wrap -->
 
-        <div class="row">
-            <div class="col-full">
-                <nav class="pgn">
-                    <router-link to="/blogs" class="btn">View All Blogs</router-link>
-                </nav>
-            </div>
-        </div>
 
     </section> <!-- s-content -->
 
+    <!-- Footer -->
+    <appfooter></appfooter>
+    <!-- Footer Ends -->
+    </div>
 </template>
 <script>
+import appfooter from './parts/footer'
 export default {
+    components:{
+        appfooter,
+    },
     data(){
         return{
             blogs:[],
@@ -64,8 +66,8 @@ export default {
         async fetchData(){
             const res = await this.callApi(
                 'get',
-                'app/get_home_blogs',
-                this.blogs
+                'app/get_blogs',
+                this.data
             )
             if(res.status == 200){
                 this.blogs = res.data;
@@ -81,6 +83,6 @@ export default {
     }
 }
 </script>
-<style lang="scss" scoped>
+<style  scoped>
 
 </style>
