@@ -137,11 +137,11 @@ class BlogController extends Controller
         $categories = Category::select('id', 'categoryName')->get();
         $tags = Tag::select('id', 'name')->get();
 
-        $blogs = Blog::with('user')->whereHas('cat', function($q) use($id){
+        return Blog::with('user', 'tag', 'cat')->whereHas('cat', function($q) use($id){
             $q->where('category_id', $id);
         })->orderBy('id', 'desc')->select(['id', 'title', 'post_except', 'userId', 'date', 'featuredImage', 'slug' ])->paginate(16);
 
-        return view('category')->with(['blogs'=> $blogs, 'categories'=> $categories, 'tags'=>$tags]);
+        // return view('category')->with(['blogs'=> $blogs, 'categories'=> $categories, 'tags'=>$tags]);
     }
      // =================================== BlOG CATEGORIES PAGE ENDS =======================
 
@@ -245,5 +245,18 @@ class BlogController extends Controller
 
     return view('signup')->with(['categories' => $categories, 'tags' => $tags,]);
   }
-// =================================== L OGIN  PAGE ENDS =======================   
+// =================================== L OGIN  PAGE ENDS =======================
+public function catRequest(Request $request)
+{
+    $this->validate($request, [
+        'categoryName' => 'required',
+        'id' => 'required'
+    ]);
+    return response()->json([
+        'message'=> $request->categoryName
+    ]);
+    // return Blog::orderBy('id','desc')->with(['cat', 'user', 'tag'])->get([
+    //     'id', 'title', 'post_except', 'userId', 'date', 'featuredImage', 'slug'
+    // ]);
+}
 }

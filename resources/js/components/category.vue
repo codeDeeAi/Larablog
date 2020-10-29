@@ -66,18 +66,22 @@ export default {
         return{
             blogs:[],
             spin: false,
+            rel:{                
+                id:this.$route.params.id,
+                categoryName:this.$route.params.categoryName,
+            }
         }
     },
     methods:{
         async fetchData(){
             const res = await this.callApi(
-                'get',
-                'app/get_blogs',
-                this.data
+                'post',
+                'app/related_cats' + '/' + this.rel.id,
+                this.rel
             )
             if(res.status == 200){
                 this.blogs = res.data;
-                this.spin = true;
+                // this.spin = true;
                 // console.log(this.blogs)
             }else{
                 this.toast('Network Error .. Pls refresh page', 'error')
@@ -87,6 +91,7 @@ export default {
     },
     created(){
         this.fetchData()
+        this.spin = true;
     }
 }
 </script>

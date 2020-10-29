@@ -8,7 +8,8 @@ Vue.use(Router);
 import homepage from "./components/homepage.vue";
 import blog from "./components/blog.vue";
 import allblogs from "./components/allblogs.vue";
-
+import category from "./components/category.vue";
+// Route::get('/category/{categoryName}/{id}', 'BlogController@categoryIndex');
 const routes = [{
         path: "/",
         name: "home",
@@ -18,6 +19,11 @@ const routes = [{
         path: "/blogs",
         name: "allblogs",
         component: allblogs,
+    },
+    {
+        path: '/category/:categoryName/:id',
+        name: "category",
+        component: category,
     },
     {
         path: '/blog',

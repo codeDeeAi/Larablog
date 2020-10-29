@@ -32,7 +32,6 @@
                     <div class="header__search">
 
                         <form role="search" method="POST" class="header__search-form" action="/search" >
-                            <!-- {{csrf_field()}} -->
                             <label>
                                 <span class="hide-content">Search for:</span>
                                 <input type="search" class="search-field" placeholder="Type Keywords" value="" name="str" title="Search for:" autocomplete="off">
@@ -52,12 +51,13 @@
                         <h2 class="header__nav-heading h6">LaraBlog</h2>
 
                         <ul class="header__nav">
-                            <li class="current"><a href="/" title="">Home</a></li>
-                            <li><a href="/allblogs" title="">Blogs</a></li>
+                            <li class=""><a href="/" title="">Home</a></li>
+                            <li><router-link to="/blogs"> Blogs</router-link></li>
                             <li class="has-children">
                                 <a href="#0" title="">Categories</a>
                                 <ul class="sub-menu">                                    
                                     <li v-for="(category, ci) in categories" :key="ci" v-if="categories.length">
+                                        <router-link :to="'/category/' + category.categoryName+ '/' + category.id">press</router-link>
                                         <!-- <a href="/category/{{$category->categoryName}}/{{$category->id}}">{{$category->categoryName}}</a> -->
                                         <a href="#!">{{category.categoryName}}</a>
                                     </li>  
@@ -129,3 +129,8 @@ export default {
     }
 }
 </script>
+<style  scoped>
+nav  a:active{
+    color: #f4f4f4 !important;
+}
+</style>
